@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Modifiers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modifier name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_modifiers.each do |admin_modifier| %>
+      <tr>
+        <td><%= admin_modifier.modifier_name %></td>
+        <td><%= link_to 'Show', admin_modifier %></td>
+        <td><%= link_to 'Edit', edit_admin_modifier_path(admin_modifier) %></td>
+        <td><%= link_to 'Destroy', admin_modifier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Modifier', new_admin_modifier_path %>
