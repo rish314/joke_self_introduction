@@ -1,0 +1,22 @@
+<%= form_with(model: modifier) do |form| %>
+  <% if modifier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(modifier.errors.count, "error") %> prohibited this modifier from being saved:</h2>
+
+      <ul>
+        <% modifier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :modifier_name %>
+    <%= form.text_field :modifier_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
