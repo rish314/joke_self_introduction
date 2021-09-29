@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :operators
+  root to: 'modifiers#index'
+
   resources :levels
   resources :jobs
   resources :modifiers

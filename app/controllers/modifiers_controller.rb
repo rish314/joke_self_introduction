@@ -1,5 +1,6 @@
 class ModifiersController < ApplicationController
   before_action :set_modifier, only: %i[ show edit update destroy ]
+  before_action :authenticate_operator!
 
   # GET /modifiers or /modifiers.json
   def index
