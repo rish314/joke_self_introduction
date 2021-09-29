@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 2021_09_29_112121) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admin_modifiers", force: :cascade do |t|
-    t.string "modifier_name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["modifier_name"], name: "index_admin_modifiers_on_modifier_name", unique: true
-  end
-
   create_table "jobs", force: :cascade do |t|
     t.string "job_name", null: false
     t.datetime "created_at", precision: 6, null: false
