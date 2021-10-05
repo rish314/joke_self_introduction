@@ -10,9 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_09_29_120634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "job_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_name"], name: "index_jobs_on_job_name", unique: true
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string "level_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_name"], name: "index_levels_on_level_name", unique: true
+  end
+
+  create_table "modifiers", force: :cascade do |t|
+    t.string "modifier_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["modifier_name"], name: "index_modifiers_on_modifier_name", unique: true
+  end
+
+  create_table "operators", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_operators_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_operators_on_reset_password_token", unique: true
+  end
 
 end
