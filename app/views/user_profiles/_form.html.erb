@@ -17,23 +17,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :hash %>
-    <%= form.text_field :hash %>
-  </div>
-
-  <div class="field">
     <%= form.label :modifier_id %>
-    <%= form.text_field :modifier_id %>
+    <%= form.collection_select :modifier_id, Modifier.all, :id, :modifier_name %>
   </div>
 
   <div class="field">
     <%= form.label :job_id %>
-    <%= form.text_field :job_id %>
+    <%= form.collection_select :job_id, Job.all, :id, :job_name %>
   </div>
 
   <div class="field">
     <%= form.label :level_id %>
-    <%= form.text_field :level_id %>
+    <%= form.collection_select :level_id, Level.all, :id, :level_name %>
   </div>
 
   <div class="actions">

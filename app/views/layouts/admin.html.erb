@@ -11,10 +11,15 @@
   </head>
 
   <body>
+    <div>
+      <%= image_tag 'selfintro' %>
+    </div>
+
     <ul>
       <li><%= link_to '修飾子', modifiers_path %></li>
       <li><%= link_to 'レベル', levels_path %></li>
       <li><%= link_to 'ジョブ', jobs_path %></li>
+      <li><%= link_to 'プロフィーユ', user_profiles_path %></li>
     </ul>
     <%= yield %>
   </body>
