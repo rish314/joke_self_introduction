@@ -1,0 +1,5 @@
+<%= form_tag("/user_profile", method: "get") do %>
+  <%= label_tag(:q, "ニックネームを入力してね:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :profiles
   devise_for :operators
-  root to: 'modifiers#index'
+
+  root to: 'user_profile#index'
+  get '/user_profile', to: 'user_profile#show'
 
   resources :levels
   resources :jobs

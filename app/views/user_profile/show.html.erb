@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>氏名:</strong>
+  <%= params[:q] %>
+</p>
+
+<p>
+  <strong>職業:</strong>
+  <%= @modifier.modifier_name %>の<%= @job.job_name %>（<%= @level.level_name %>）
+</p>
+
