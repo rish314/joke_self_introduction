@@ -3,13 +3,9 @@
 one:
   nick_name: MyString
   hash: MyString
-  modifier: one
   job: one
-  level: one
 
 two:
   nick_name: MyString
   hash: MyString
-  modifier: two
   job: two
-  level: two

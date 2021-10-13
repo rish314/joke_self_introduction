@@ -13,3 +13,11 @@
   Modifier.create(modifier_name: word)
 end
 
+p Tasks::ImportJobs.run
+
+user = Operator.new(:email => 'admin@example.com', :password => 'adminadmin')
+user.save!
+
+(1..10).each do |level|
+  Level.create(level_name: "Level " + level.to_s + ".")
+end

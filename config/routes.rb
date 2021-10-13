@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_profiles
+  resources :profiles
   devise_for :operators
   root to: 'modifiers#index'
 

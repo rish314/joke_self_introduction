@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nick name:</strong>
+  <%= @profile.nick_name %>
+</p>
+
+<p>
+  <strong>Hash:</strong>
+  <%= @profile.hash %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @profile.job_id %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
