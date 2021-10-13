@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Admin::ModifierTest < ActiveSupport::TestCase
+class ProfileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

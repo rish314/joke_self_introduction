@@ -5,7 +5,7 @@ class ModifiersController < ApplicationController
 
   # GET /modifiers or /modifiers.json
   def index
-    @modifiers = Modifier.page(params[:page]).per(3)
+    @modifiers = Modifier.page(params[:page]).per(30)
   end
 
   # GET /modifiers/1 or /modifiers/1.json
